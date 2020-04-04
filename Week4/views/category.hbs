@@ -1,0 +1,17 @@
+<table class="table" id="dataTable" data-page-length='{{limit}}'>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+    </thead>
+
+    <tbody>
+        {{#each categories }}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{description}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

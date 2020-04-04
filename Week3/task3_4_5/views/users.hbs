@@ -1,0 +1,25 @@
+<table class="table" id="dataTable" data-page-length='{{limit}}'>
+    <thead>
+        <th>Id</th>
+        <th>Avatar</th>
+        <th>Full Name</th>
+        <th>Gender</th>
+        <th>Country</th>
+        <th>Email</th>
+        <th>View Details</th>
+    </thead>
+
+    <tbody>
+        {{#each users }}
+        <tr>
+            <td>{{id}}</td>
+            <td><img src="{{avatar}}" alt=""></td>
+            <td>{{fullName}}</td>
+            <td>{{gender}}</td>
+            <td>{{country}}</td>
+            <td><a href="mailto: {{email}}">{{email}}</a></td>
+            <td><a href='{{url}}/{{id}}'>View Detail</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

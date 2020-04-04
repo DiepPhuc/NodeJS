@@ -1,0 +1,25 @@
+<table class="table">
+    {{#each product}}
+        <tr>
+            <td><img src="{{thumbnail}}" alt=""></td>
+        </tr>
+        <tr>
+            <td>Id: <span>{{_id}}</span></td>
+        </tr>
+        <tr>
+            <td>Name: <span>{{name}}</span></td>
+        </tr>
+        <tr>
+            <td>Description: <span>{{shortDescription}}</span></td>
+        </tr>
+        <tr>
+            <td>Category ID: <span>{{categoryId}}</span></td>
+        </tr>
+        <tr>
+            <td>Sale Price: <span>{{salePrice}}$</span></td>
+        </tr>
+        <tr>
+            <td>Price: <span>{{originalPrice}}$</span></td>
+        </tr>
+    {{/each}}
+</table>

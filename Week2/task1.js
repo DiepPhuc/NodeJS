@@ -6,16 +6,26 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question("What's your name?", (name) => {
+const inputName = (inputYob) => {
+  rl.question("What's your name?", (name) => {
+    inputYob(name);
+});
+};
+const inputYob = (name) => {
   rl.question("What's your year of birth?", (yob) => {
     const age = new Date().getFullYear() - yob;
-    rl.question("What's your home town?", (homeTown) => {
-      console.log(
-        `Thank you. Hello ${chalk.yellow(name)}, so you are ${chalk.blue(
-          age
-        )} years old and from ${chalk.red(homeTown)}`
-      );
-      rl.close();
-    });
+    inputHomeTown(name, age);
   });
-});
+};
+
+const inputHomeTown = (name, yob) => {
+  rl.question("What's your home town?", (homeTown) => {
+    console.log(
+      `Thank you. Hello ${chalk.yellow(name)}, so you are ${chalk.blue(
+        yob
+      )} years old and from ${chalk.red(homeTown)}`
+);
+    rl.close();
+  });
+};
+inputName(inputYob);

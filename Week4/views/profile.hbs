@@ -1,0 +1,40 @@
+<table class="table">
+    {{#each user}}
+        <tr>
+            <td><img src="{{avatar}}" alt=""></td>
+        </tr>
+        <tr>
+            <td>Id: <span>{{_id}}</span></td>
+        </tr>
+        <tr>
+            <td>Name: <span>{{firstName}} {{lastName}}</span></td>
+        </tr>
+        <tr>
+            <td>Gender: <span>{{gender}}</span></td>
+        </tr>
+        <tr>
+            <td>Dob: <span>{{dob}}</span></td>
+        </tr>
+        <tr>
+            <td>Country: <span>{{country}}</span></td>
+        </tr>
+        <tr>
+            <td>Phone Number: <span>{{phoneNumber}}</span></td>
+        </tr>
+        <tr>
+            <td>Zipcode: <span>{{zipcode}}</span></td>
+        </tr>
+        <tr>
+            <td>Username: <span>{{username}}</span></td>
+        </tr>
+        <tr>
+            <td>Email: <span>{{email}}</span></td>
+        </tr>
+        <tr>
+            <td>Email Verified: <span>{{emailVerified}}</span></td>
+        </tr>
+        <tr>
+            <td>Role: <span>{{role}}</span></td>
+        </tr>
+    {{/each}}
+</table>

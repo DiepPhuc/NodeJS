@@ -1,0 +1,21 @@
+<table class="table" id="dataTable" data-page-length='{{limit}}'>
+    <thead>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Original Price</th>
+        <th>Sale Price</th>
+        <th>View Details</th>
+    </thead>
+
+    <tbody>
+        {{#each products }}
+        <tr>
+            <td><img src="{{thumbnail}}" alt=""></td>
+            <td>{{name}}</td>
+            <td>{{originalPrice}}$</td>
+            <td>{{salePrice}}$</td>
+            <td><a href='{{url}}/{{id}}'>View Detail</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
